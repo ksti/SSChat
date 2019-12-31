@@ -96,7 +96,7 @@
     //[[[[_mSearchBar.subviews objectAtIndex:0] subviews] objectAtIndex:0] removeFromSuperview];
     [_mSearchBar clearBackground];
     [_mSearchBar setBackgroundColor:[UIColor clearColor]];
-    [_mSearchBar changeLeftPlaceholder:@"搜索医生、症状、服务......"];
+    [_mSearchBar changeLeftPlaceholder:@"搜索医生、症状、服务......" color:makeColorHex(@"C7C7C7")];
     [_mSearchBar setImage:[[UIImage imageNamed:@"icon_sousuo"] imageWithColor:makeColorHex(@"#999999")]
          forSearchBarIcon:UISearchBarIconSearch
                     state:UIControlStateNormal];
@@ -109,7 +109,6 @@
         [searchField setFont:[UIFont systemFontOfSize:14]];
         searchField.tintColor = makeColorHex(@"C7C7C7");
         //[searchField setValue:makeColorHex(@"C7C7C7") forKeyPath:@"_placeholderLabel.textColor"];
-        searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:_mSearchBar.placeholder attributes:@{NSForegroundColorAttributeName: makeColorHex(@"C7C7C7")}];
         searchField.textColor = makeColorHex(@"333333");
         [searchField addTarget:self action:@selector(textClick:) forControlEvents:UIControlEventEditingChanged];
     }
@@ -352,20 +351,20 @@
     
     if(_searchType == PBSearchAllType1){
         self.mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_mSearchBar changeLeftPlaceholder:@"搜索体检套餐......"];
+        [_mSearchBar changeLeftPlaceholder:@"搜索体检套餐......" color:makeColorHex(@"C7C7C7")];
         self.mTableView.backgroundColor = BackGroundColor;
         self.mTableView.backgroundView.backgroundColor = BackGroundColor;
         _footerLab.backgroundColor = BackGroundColor;
         
     }else if(_searchType == PBSearchAllType2){
         self.mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_mSearchBar changeLeftPlaceholder:@"搜索特色服务......"];
+        [_mSearchBar changeLeftPlaceholder:@"搜索特色服务......" color:makeColorHex(@"C7C7C7")];
     }else if(_searchType == PBSearchAllType3){
         self.mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_mSearchBar changeLeftPlaceholder:@"搜索医疗美容......"];
+        [_mSearchBar changeLeftPlaceholder:@"搜索医疗美容......" color:makeColorHex(@"C7C7C7")];
     }else if(_searchType == PBSearchAllType4){
         self.mTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        [_mSearchBar changeLeftPlaceholder:@"搜索科室......."];
+        [_mSearchBar changeLeftPlaceholder:@"搜索科室......." color:makeColorHex(@"C7C7C7")];
     }
     
 }

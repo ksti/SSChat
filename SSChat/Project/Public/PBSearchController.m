@@ -95,7 +95,6 @@
         [searchField setFont:[UIFont systemFontOfSize:14]];
         searchField.tintColor = makeColorHex(@"C7C7C7");
         //[searchField setValue:makeColorHex(@"C7C7C7") forKeyPath:@"_placeholderLabel.textColor"];
-        searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:_mSearchBar.placeholder attributes:@{NSForegroundColorAttributeName: makeColorHex(@"C7C7C7")}];
         searchField.textColor = makeColorHex(@"333333");
         [searchField addTarget:self action:@selector(textClick:) forControlEvents:UIControlEventEditingChanged];
     }
@@ -117,7 +116,7 @@
     self.mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.mTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    [_mSearchBar changeLeftPlaceholder:@"请输入联系人..."];
+    [_mSearchBar changeLeftPlaceholder:@"请输入联系人..." color:makeColorHex(@"C7C7C7")];
 
     [self.view bringSubviewToFront:self.navtionBar];
     

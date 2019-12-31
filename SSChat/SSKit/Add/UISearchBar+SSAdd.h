@@ -10,6 +10,6 @@
 
 @interface UISearchBar (SSAdd)
 
--(void)changeLeftPlaceholder:(NSString *)placeholder;
+-(void)changeLeftPlaceholder:(NSString *)placeholder color:(UIColor *)color;
 
 @end

@@ -57,7 +57,6 @@
             [searchField setFont:[UIFont systemFontOfSize:16]];
             searchField.tintColor = makeColorHex(@"C7C7C7");
             //[searchField setValue:makeColorHex(@"C7C7C7") forKeyPath:@"_placeholderLabel.textColor"];
-            searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:_mSearchBar.placeholder attributes:@{NSForegroundColorAttributeName: makeColorHex(@"C7C7C7")}];
             searchField.textColor = makeColorHex(@"333333");
         }
     }

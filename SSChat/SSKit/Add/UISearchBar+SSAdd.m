@@ -10,8 +10,12 @@
 
 @implementation UISearchBar (SSAdd)
 
--(void)changeLeftPlaceholder:(NSString *)placeholder {
+-(void)changeLeftPlaceholder:(NSString *)placeholder color:(UIColor *)color {
     self.placeholder = placeholder;
+    UITextField *searchField = [self valueForKey:@"searchField"];
+    if (searchField) {
+        searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder ?: @"" attributes:@{NSForegroundColorAttributeName: color ?: self.tintColor}];
+    }
     SEL centerSelector = NSSelectorFromString([NSString stringWithFormat:@"%@%@", @"setCenter", @"Placeholder:"]);
     if ([self respondsToSelector:centerSelector]) {
         BOOL centeredPlaceholder = NO;
