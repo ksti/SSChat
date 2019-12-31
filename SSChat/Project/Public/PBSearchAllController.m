@@ -14,6 +14,7 @@
 #import "MineViews.h"
 
 #import "SSTableSwitchView.h"
+#import "UISearchBar+ClearBackground.h"
 
 
 
@@ -92,7 +93,8 @@
     _mSearchBar.enablesReturnKeyAutomatically = NO;
     _mSearchBar.barTintColor = [UIColor clearColor];
     _mSearchBar.tintColor=[UIColor blackColor];
-    [[[[_mSearchBar.subviews objectAtIndex:0] subviews] objectAtIndex:0] removeFromSuperview];
+    //[[[[_mSearchBar.subviews objectAtIndex:0] subviews] objectAtIndex:0] removeFromSuperview];
+    [_mSearchBar clearBackground];
     [_mSearchBar setBackgroundColor:[UIColor clearColor]];
     [_mSearchBar changeLeftPlaceholder:@"搜索医生、症状、服务......"];
     [_mSearchBar setImage:[[UIImage imageNamed:@"icon_sousuo"] imageWithColor:makeColorHex(@"#999999")]
@@ -106,7 +108,8 @@
         searchField.layer.cornerRadius = 16;
         [searchField setFont:[UIFont systemFontOfSize:14]];
         searchField.tintColor = makeColorHex(@"C7C7C7");
-        [searchField setValue:makeColorHex(@"C7C7C7") forKeyPath:@"_placeholderLabel.textColor"];
+        //[searchField setValue:makeColorHex(@"C7C7C7") forKeyPath:@"_placeholderLabel.textColor"];
+        searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:_mSearchBar.placeholder attributes:@{NSForegroundColorAttributeName: makeColorHex(@"C7C7C7")}];
         searchField.textColor = makeColorHex(@"333333");
         [searchField addTarget:self action:@selector(textClick:) forControlEvents:UIControlEventEditingChanged];
     }

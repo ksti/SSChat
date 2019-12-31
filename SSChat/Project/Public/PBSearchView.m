@@ -7,6 +7,7 @@
 //
 
 #import "PBSearchView.h"
+#import "UISearchBar+ClearBackground.h"
 
 
 @implementation PBSearchTableHeader
@@ -39,7 +40,8 @@
         _mSearchBar.enablesReturnKeyAutomatically = NO;
         _mSearchBar.barTintColor = [UIColor clearColor];
         _mSearchBar.tintColor=[UIColor blackColor];
-        [[[[_mSearchBar.subviews objectAtIndex:0] subviews] objectAtIndex:0] removeFromSuperview];
+        //[[[[_mSearchBar.subviews objectAtIndex:0] subviews] objectAtIndex:0] removeFromSuperview];
+        [_mSearchBar clearBackground];
         [_mSearchBar setBackgroundColor:[UIColor clearColor]];
         _mSearchBar.userInteractionEnabled = NO;
         
@@ -54,7 +56,8 @@
             searchField.layer.cornerRadius = 6;
             [searchField setFont:[UIFont systemFontOfSize:16]];
             searchField.tintColor = makeColorHex(@"C7C7C7");
-            [searchField setValue:makeColorHex(@"C7C7C7") forKeyPath:@"_placeholderLabel.textColor"];
+            //[searchField setValue:makeColorHex(@"C7C7C7") forKeyPath:@"_placeholderLabel.textColor"];
+            searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:_mSearchBar.placeholder attributes:@{NSForegroundColorAttributeName: makeColorHex(@"C7C7C7")}];
             searchField.textColor = makeColorHex(@"333333");
         }
     }

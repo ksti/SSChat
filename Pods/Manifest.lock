@@ -3,6 +3,7 @@ PODS:
   - IQKeyboardManager (6.3.0)
   - Masonry (1.1.0)
   - MJRefresh (3.2.0)
+  - NIMSDK (7.1.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -12,23 +13,27 @@ DEPENDENCIES:
   - IQKeyboardManager
   - Masonry
   - MJRefresh
+  - NIMSDK
   - YYKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - BmobSDK
     - IQKeyboardManager
     - Masonry
     - MJRefresh
     - YYKit
+  trunk:
+    - NIMSDK
 
 SPEC CHECKSUMS:
   BmobSDK: e0f9e4b451233a80af63a8ae4f2d239474bf567b
   IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  NIMSDK: a5bbf7c5c97f8192076f507f06775b9d4f58c285
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: bc93f4cd91199de080db292c433c84c2166ed179
+PODFILE CHECKSUM: 74de6115f12437876f43ec4d325830b75ad953b4
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

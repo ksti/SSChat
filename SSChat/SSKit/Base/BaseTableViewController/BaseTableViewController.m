@@ -28,6 +28,7 @@
         }
             break;
         default:
+            return [BaseTableViewPlainController new];
             break;
     }
 }

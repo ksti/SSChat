@@ -13,6 +13,7 @@
 #import "SSTableSwitchView.h"
 #import "ContactFriendDetController.h"
 #import "MinePersonalController.h"
+#import "UISearchBar+ClearBackground.h"
 
 @interface PBSearchController ()<UISearchBarDelegate,PBSearchViewsDelegate>
 
@@ -78,7 +79,8 @@
     _mSearchBar.enablesReturnKeyAutomatically = NO;
     _mSearchBar.barTintColor = [UIColor clearColor];
     _mSearchBar.tintColor=[UIColor blackColor];
-    [[[[_mSearchBar.subviews objectAtIndex:0] subviews] objectAtIndex:0] removeFromSuperview];
+    //[[[[_mSearchBar.subviews objectAtIndex:0] subviews] objectAtIndex:0] removeFromSuperview];
+    [_mSearchBar clearBackground];
     [_mSearchBar setBackgroundColor:[UIColor clearColor]];
     
     [_mSearchBar setImage:[[UIImage imageNamed:@"icon_sousuo"] imageWithColor:makeColorHex(@"#999999")]
@@ -92,7 +94,8 @@
         searchField.layer.cornerRadius = 16;
         [searchField setFont:[UIFont systemFontOfSize:14]];
         searchField.tintColor = makeColorHex(@"C7C7C7");
-        [searchField setValue:makeColorHex(@"C7C7C7") forKeyPath:@"_placeholderLabel.textColor"];
+        //[searchField setValue:makeColorHex(@"C7C7C7") forKeyPath:@"_placeholderLabel.textColor"];
+        searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:_mSearchBar.placeholder attributes:@{NSForegroundColorAttributeName: makeColorHex(@"C7C7C7")}];
         searchField.textColor = makeColorHex(@"333333");
         [searchField addTarget:self action:@selector(textClick:) forControlEvents:UIControlEventEditingChanged];
     }

@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2550AD92C02D1C6DBA9DB14F /* Pods_SSChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E790C3D06A623A6F6A211A /* Pods_SSChat.framework */; };
+		6F3721FA23BB4084001B5E88 /* UISearchBar+ClearBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3721F923BB4084001B5E88 /* UISearchBar+ClearBackground.m */; };
 		AF187C6C2264D64400152931 /* MinePersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF187C6B2264D64400152931 /* MinePersonalController.m */; };
 		AF187C6F2264D65C00152931 /* MineQrCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF187C6E2264D65C00152931 /* MineQrCodeController.m */; };
 		AF187C722264DC3100152931 /* MineAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF187C712264DC3100152931 /* MineAddressController.m */; };
@@ -273,6 +274,8 @@
 /* Begin PBXFileReference section */
 		20E790C3D06A623A6F6A211A /* Pods_SSChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A5E8C544C24811E46C3107 /* Pods-SSChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSChat/Pods-SSChat.release.xcconfig"; sourceTree = "<group>"; };
+		6F3721F823BB4084001B5E88 /* UISearchBar+ClearBackground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+ClearBackground.h"; sourceTree = "<group>"; };
+		6F3721F923BB4084001B5E88 /* UISearchBar+ClearBackground.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+ClearBackground.m"; sourceTree = "<group>"; };
 		AF187C6A2264D64400152931 /* MinePersonalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinePersonalController.h; sourceTree = "<group>"; };
 		AF187C6B2264D64400152931 /* MinePersonalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinePersonalController.m; sourceTree = "<group>"; };
 		AF187C6D2264D65C00152931 /* MineQrCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineQrCodeController.h; sourceTree = "<group>"; };
@@ -1342,6 +1345,8 @@
 		AFFA3BBA225ED759002AE49A /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				6F3721F823BB4084001B5E88 /* UISearchBar+ClearBackground.h */,
+				6F3721F923BB4084001B5E88 /* UISearchBar+ClearBackground.m */,
 				AFFA3BC2225ED7FE002AE49A /* PBSearchAllController.h */,
 				AFFA3BC4225ED7FF002AE49A /* PBSearchAllController.m */,
 				AFFA3BBB225ED762002AE49A /* PBSearchController.h */,
@@ -1368,6 +1373,7 @@
 				AF804B0B21A3DC7F00225FCE /* Frameworks */,
 				AF804B0C21A3DC7F00225FCE /* Resources */,
 				9A726B42E770467DE3BCE199 /* [CP] Embed Pods Frameworks */,
+				F4D0ED667B07C7CC25A61C19 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1593,23 +1599,33 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SSChat/Pods-SSChat-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSChat/Pods-SSChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSChat/Pods-SSChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSChat/Pods-SSChat-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SSChat/Pods-SSChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4D0ED667B07C7CC25A61C19 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSChat/Pods-SSChat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSChat/Pods-SSChat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SSChat/Pods-SSChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1702,6 +1718,7 @@
 				AF804CB021A3DCE100225FCE /* SSImageGroupView.m in Sources */,
 				AFDEB11C228E5F2400EA2CB1 /* SSSystemManager.m in Sources */,
 				AFDEB11F228E5F2E00EA2CB1 /* SSDeviceManager.m in Sources */,
+				6F3721FA23BB4084001B5E88 /* UISearchBar+ClearBackground.m in Sources */,
 				AF804CAE21A3DCE100225FCE /* SSVideoView.m in Sources */,
 				AFBD284F22880F550030B15C /* RootTabBarController.m in Sources */,
 				AFD73695225C2CE300A3328C /* SSGestureLockerView.m in Sources */,

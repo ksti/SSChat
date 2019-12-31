@@ -8,7 +8,7 @@ pod 'IQKeyboardManager'
 pod 'MJRefresh'
 pod 'YYKit'
 
-#pod 'NIMSDK'
+pod 'NIMSDK'
 pod 'BmobSDK'
 pod 'Masonry'
 
