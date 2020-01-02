@@ -204,41 +204,21 @@ static SSDeviceDefault* device = nil;
     //根据不同的设备适配尺寸 iPhone X的尺寸是375*812
     if(device.deviceType==DeviceiPhone){
         
-        if(device.deviceModel==Simulator){
-            
-            cout(@(SCREEN_Width));
-            cout(@(SCREEN_Height));
-            
-            
-            if(SCREEN_Height==812 || SCREEN_Height==896){
-                device.statuBarHeight = 44;
-                device.navBarHeight = 44;
-                device.safeAreaTopHeight = 88;
-                device.safeAreaBottomHeight = 34;
-                device.tabBarHeight = 49;
-            }else{
-                device.statuBarHeight = 20;
-                device.navBarHeight = 44;
-                device.safeAreaTopHeight = 64;
-                device.safeAreaBottomHeight = 0;
-                device.tabBarHeight = 49;
-            }
-        }
+        cout(@(SCREEN_Width));
+        cout(@(SCREEN_Height));        
         
-        else{
-            if(device.deviceModel == iPhoneX){
-                device.statuBarHeight = 44;
-                device.navBarHeight = 44;
-                device.safeAreaTopHeight = 88;
-                device.safeAreaBottomHeight = 34;
-                device.tabBarHeight = 49;
-            }else{
-                device.statuBarHeight = 20;
-                device.navBarHeight = 44;
-                device.safeAreaTopHeight = 64;
-                device.safeAreaBottomHeight = 0;
-                device.tabBarHeight = 49;
-            }
+        if(SCREEN_Height==812 || SCREEN_Height==896){
+            device.statuBarHeight = 44;
+            device.navBarHeight = 44;
+            device.safeAreaTopHeight = 88;
+            device.safeAreaBottomHeight = 34;
+            device.tabBarHeight = 49;
+        }else{
+            device.statuBarHeight = 20;
+            device.navBarHeight = 44;
+            device.safeAreaTopHeight = 64;
+            device.safeAreaBottomHeight = 0;
+            device.tabBarHeight = 49;
         }
         
     }
